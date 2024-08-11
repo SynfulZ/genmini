@@ -1,3 +1,5 @@
+// controllers/trelloController.js
+
 const trello = require('../config/trello');
 
 exports.createBoard = async (req, res) => {
@@ -9,3 +11,5 @@ exports.createBoard = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+

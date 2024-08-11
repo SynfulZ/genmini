@@ -1,7 +1,12 @@
+// routes/trelloRoutes.js
+
 const express = require('express');
-const { createBoard } = require('../controllers/trelloController');
+const trelloController = require('../controllers/trelloController');
+
 const router = express.Router();
 
-router.post('/create-board', createBoard);
+// Define the route for creating a Trello board
+router.post('/create-board', trelloController.createBoard);
 
+// Export the router
 module.exports = router;

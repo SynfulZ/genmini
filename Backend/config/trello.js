@@ -1,8 +1,13 @@
-const Trello = require('node-trello');
-const dotenv = require('dotenv');
+// config/trello.js
 
-dotenv.config();
+const axios = require('axios');
 
-const trello = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
+const trello = axios.create({
+  baseURL: 'https://api.trello.com',
+  params: {
+    key: process.env.TRELLO_API_KEY, // Your Trello API key
+    token: process.env.TRELLO_API_TOKEN, // Your Trello API token
+  },
+});
 
 module.exports = trello;
