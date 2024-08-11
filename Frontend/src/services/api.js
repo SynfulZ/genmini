@@ -1,6 +1,10 @@
-import axios from 'axios';
+// ...existing imports and functions
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+// Trello
+export const createTrelloBoard = (boardName) => API.post('/trello/create-board', { boardName });
 
-export const registerUser = (userData) => API.post('/users/register', userData);
-export const loginUser = (userData) => API.post('/users/login', userData);
+// GitHub
+export const createGithubRepo = (repoName) => API.post('/github/create-repo', { repoName });
+
+// Gemini
+export const generateWorkflow = (projectSummary) => API.post('/gemini/generate-workflow', { projectSummary });

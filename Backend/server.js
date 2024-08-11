@@ -1,3 +1,3 @@
-const userRoutes = require('./routes/userRoutes');
+const geminiRoutes = require('./routes/geminiRoutes');
 
-app.use('/api/users', userRoutes);
+app.use('/api/gemini', geminiRoutes);

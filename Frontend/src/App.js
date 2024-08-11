@@ -1,13 +1,15 @@
 import React from 'react';
-import Register from './components/Register';
-import Login from './components/Login';
+import TrelloBoard from './components/TrelloBoard';
+import GithubRepo from './components/GithubRepo';
+import WorkflowGenerator from './components/WorkflowGenerator';
 
 const App = () => {
   return (
     <div>
       <h1>Collaborative Platform</h1>
-      <Register />
-      <Login />
+      <TrelloBoard />
+      <GithubRepo />
+      <WorkflowGenerator />
     </div>
   );
 };
